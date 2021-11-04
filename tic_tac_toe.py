@@ -1,3 +1,13 @@
+"""
+   This application created by Niyozbek Mirzayev.
+   Contact for questions and suggestions:
+   Email: niyozbekmirzayev2018@gmail.com
+   Phone: +998976174739 (uz)                  
+"""
+"""
+    To run the file download file called MyButton.py as a modul.
+"""
+
 import sys 
 from PyQt5.QtWidgets import  QApplication, QWidget, QMessageBox , QGridLayout
 from PyQt5.QtGui import *
