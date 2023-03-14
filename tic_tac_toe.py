@@ -1,13 +1,3 @@
-"""
-   This application created by Niyozbek Mirzayev.
-   Contact for questions and suggestions:
-   Email: niyozbekmirzayev2018@gmail.com
-   Phone: +998976174739 (uz)                  
-"""
-"""
-    To run the file download file called MyButton.py as a modul.
-"""
-
 import sys 
 from PyQt5.QtWidgets import  QApplication, QWidget, QMessageBox , QGridLayout
 from PyQt5.QtGui import *
@@ -18,7 +8,6 @@ class MainWindow(QWidget):
     def __init__(self):
         super(). __init__()
 
-        #giving easier names to methods
         #game starts with x
         self.setStyleSheet('.MyButton { font-size: 13pt;}')
         self.gamer = True
@@ -108,8 +97,7 @@ class MainWindow(QWidget):
         #showing result in antoher message box
     def show_result(self,fact):
         self.msgBox.setIcon(QMessageBox.Question)
-        self.msgBox.setText(f"""{fact}
-Do you want to play again ? """)
+        self.msgBox.setText(f"""{fact} Do you want to play again ? """)
         self.msgBox.setWindowTitle("Result")
         self.msgBox.setStandardButtons(QMessageBox.Ok | QMessageBox.Cancel)
         self.msgBox.show()
@@ -122,10 +110,8 @@ Do you want to play again ? """)
             os.execl(sys.executable, sys.executable, *sys.argv)   
         elif i.text() == "Cancel":
             sys.exit()
-        
-
             
-        #checking who is winner
+    #checking who is winner
     def winner_check(self,winner):
         if winner == "X":
             fact = "X is winner"
